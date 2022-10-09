@@ -380,6 +380,11 @@ class Display
       max_width = Display.max_width
       max_height = Display.max_height
 
+      # have proper minimal height
+      if max_height < 10
+        max_height = 10
+      end
+
       # Hashes by range, e.g. 0..2, representing the width
       # of the column bounded by that range.
       col_range_widths = {}
